@@ -1,0 +1,52 @@
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+  background: #fff;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+body {
+  background: #ccc;
+  padding: 0px;
+  margin: 0px;
+}
+</style>
+
+<template>
+  <div id="app">
+    <PageHeader />
+
+    <router-view />
+
+    <PageFooter />
+  </div>
+</template>
+
+<script>
+import PageHeader from "./components/PageHeader.vue";
+import PageFooter from "./components/PageFooter.vue";
+
+export default {
+  name: "App",
+
+  components: { PageHeader, PageFooter }
+};
+</script>
